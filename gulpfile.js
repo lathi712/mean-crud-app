@@ -52,7 +52,9 @@ var browserSync = require('browser-sync');
       .pipe(jshint.reporter('default'));
   });
 
-
+  gulp.task('travis',['build','testServerJS'],function(){
+       process.exit(0);  
+	});
 
   gulp.task('browser-sync', ['nodemon'], function() {
     browserSync.init(null, {
