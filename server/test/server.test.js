@@ -32,7 +32,6 @@ describe('POST /todos',()=>{
 
 
     Todo.find({todo}).then((todos)=>{
-      console.log(todos.length);
       expect(todos.length).toBe(1);
       expect(todos[0].todo).toBe(todo);
       done();
@@ -64,6 +63,7 @@ describe('POST /todos',()=>{
   });
 
   });
+
   describe('GET /api/todos',()=>{
     it('should should get all todos',(done)=>{
 
@@ -71,7 +71,6 @@ describe('POST /todos',()=>{
       .get('/api/todos')
       .expect(200)
       .expect((res)=>{
-        console.log(res.body);
         expect(res.body.length).toBe(2);
       }).end(done);
     });

@@ -6,7 +6,6 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
   // get all Todos on Load
   todosFactory.getTodos().then(function(data) {
     $scope.todos = data.data;
-    console.log("Entered GET TODOs");
   });
 
   // Save a Todo to the server
@@ -57,7 +56,6 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
 
   // Delete a Todo
   $scope.delete = function(i) {
-    console.log($scope.todos[i]);
     todosFactory.deleteTodo($scope.todos[i]._id).then(function(data) {
       if (data.data) {
         $scope.todos.splice(i, 1);
