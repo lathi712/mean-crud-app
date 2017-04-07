@@ -7,7 +7,7 @@
     "test": "mocha server/**/*.test.js",
     "test-watch": "nodemon --exec 'npm test'"
   },
-  "author": "Lathesh Karkera",
+  "author": "Lathesh Karkera S",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.17.1",
