@@ -6,6 +6,7 @@
     var logger = require('morgan');
     var cookieParser = require('cookie-parser');
     var bodyParser = require('body-parser');
+    var ejs = require('ejs');
 
     var routes = require('./routes/index');
 
@@ -13,7 +14,7 @@
 
     // view engine setup
     app.set('views', path.join(__dirname, 'views'));
-    app.engine('html', require('ejs').renderFile);
+    app.engine('html', ejs.renderFile);
     app.set('view engine', 'html');
 
     app.use(logger('dev'));

@@ -3,9 +3,6 @@
   'use strict';
   var express = require('express');
   var router = express.Router();
-  var mongojs = require('mongojs');
-  //var db = mongojs('meanTodo', ['todos']);
-  //var db = mongojs('mongodb://localhost:27017/meantodo', ['todos']);
 
 
 const {Todo} =  require('./../models/todo');
@@ -54,7 +51,8 @@ Todo.update({
   });
 
   router.delete('/api/todos/:_id', function(req, res) {
-    Todo.findByIdAndRemove(req.body._id,function(err, data) {
+    console.log(req.params);
+    Todo.findByIdAndRemove(req.params._id,function(err, data) {
       res.json(data);
     });
   });

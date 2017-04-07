@@ -7,7 +7,7 @@ const todos =[{
   todo:"First test"
 },{
   todo:"Second test"
-}]
+}];
 beforeEach((done)=>{
     Todo.remove({}).then(()=>{
         return Todo.insertMany(todos);
@@ -63,8 +63,6 @@ describe('POST /todos',()=>{
     });
   });
 
-
-
   });
   describe('GET /api/todos',()=>{
     it('should should get all todos',(done)=>{
@@ -75,6 +73,6 @@ describe('POST /todos',()=>{
       .expect((res)=>{
         console.log(res.body);
         expect(res.body.length).toBe(2);
-      }).end(done)
+      }).end(done);
     });
   });

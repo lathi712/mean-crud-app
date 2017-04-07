@@ -5,10 +5,10 @@
   "main": "app.js",
   "scripts": {
     "test": "mocha server/**/*.test.js",
-    "test-watch":"nodemon --exec 'npm test'"
+    "test-watch": "nodemon --exec 'npm test'"
   },
   "author": "Lathesh Karkera",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "body-parser": "^1.17.1",
     "cookie-parser": "^1.4.3",
@@ -20,7 +20,13 @@
     "morgan": "^1.8.1"
   },
   "devDependencies": {
+    "browser-sync": "^2.18.8",
     "expect": "^1.20.2",
+    "gulp": "^3.8.7",
+    "gulp-jshint": "^1.8.4",
+    "gulp-livereload": "^2.1.1",
+    "gulp-nodemon": "^1.0.4",
+    "gulp-watch": "^0.6.9",
     "mocha": "^3.0.2",
     "nodemon": "^1.10.2",
     "supertest": "^2.0.0"

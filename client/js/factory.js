@@ -15,6 +15,7 @@ todoApp.factory('todosFactory', function($http) {
   };
 
   _todoService.deleteTodo = function(id) {
+    console.log(urlBase + '/' + id);
     return $http.delete(urlBase + '/' + id);
   };
 
