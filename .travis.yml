@@ -5,6 +5,5 @@ env:
 - NODE_ENV="development"
 _ NODE_ENV="production";SESSION="la li"
 services:
-- mongodb 
-script:gulp travis 
-
+- mongodb
+script:gulp travis

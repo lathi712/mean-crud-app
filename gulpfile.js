@@ -9,16 +9,7 @@
     _paths = ['server/**/*.js', 'client/js/*.js'];
 var browserSync = require('browser-sync');
 
-  //register nodemon task
-  // gulp.task('nodemon', function() {
-  //   nodemon({
-  //     script: 'server/app.js',
-  //     env: {
-  //       'NODE_ENV': 'development'
-  //     }
-  //   })
-  //     .on('restart');
-  // });
+
   gulp.task('nodemon', function(cb) {
     return nodemon({
       script: 'server/app.js',
@@ -53,7 +44,7 @@ var browserSync = require('browser-sync');
   });
 
   gulp.task('travis',['build','testServerJS'],function(){
-       process.exit(0);  
+       process.exit(0);
 	});
 
   gulp.task('browser-sync', ['nodemon'], function() {
